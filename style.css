@@ -1,0 +1,760 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #121215;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 主容器 */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 背景装饰 */
+.bg-rectangle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background: linear-gradient(90deg, #222 0%, #181818 100%);
+    border-bottom: 1px solid #222;
+    z-index: 0;
+}
+
+.bg-ellipse {
+    position: fixed;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 234px;
+    height: 234px;
+    background: radial-gradient(circle, rgba(255, 161, 145, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 导航栏 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    z-index: 100;
+    background: rgba(18, 18, 21, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-bot {
+    position: relative;
+    width: 130px;
+    height: 35px;
+}
+
+.logo-union {
+    position: absolute;
+    top: 12px;
+    left: 45px;
+    width: 44px;
+    height: 17px;
+}
+
+.logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 35px;
+}
+
+.logo-dot1 {
+    position: absolute;
+    top: 26px;
+    left: 91px;
+    width: 3px;
+    height: 3px;
+}
+
+.logo-dot2 {
+    position: absolute;
+    top: 18px;
+    left: 110px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #c2362a;
+    border-radius: 50%;
+}
+
+.bot-icon {
+    position: absolute;
+    top: 12px;
+    left: 97px;
+    width: 33px;
+    height: 16px;
+}
+
+.bot-vector1,
+.bot-vector2,
+.bot-vector3 {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+}
+
+.bot-vector1 {
+    top: 3px;
+    left: 26px;
+}
+
+.bot-vector2 {
+    top: 0;
+    left: 13px;
+}
+
+.bot-vector3 {
+    top: 0;
+    left: 0;
+}
+
+.beta-badge {
+    background-color: #222;
+    color: #ffa191;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.nav-right {
+    font-size: 14px;
+    color: #999;
+}
+
+.nav-tagline .highlight {
+    color: #ffa191;
+}
+
+/* Hero 图片 */
+.hero-image {
+    margin-top: 140px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-image img {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(255, 161, 145, 0.3));
+}
+
+/* Hero 区域 */
+.hero {
+    max-width: 800px;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 80px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.platform-link {
+    color: #ffa191;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.platform-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 14px 32px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: #ffa191;
+    color: #121215;
+}
+
+.btn-primary:hover {
+    background-color: #ff8f7d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+    background-color: #ffa191;
+    color: #121215;
+    padding: 16px;
+}
+
+.btn-full:hover {
+    background-color: #ff8f7d;
+}
+
+/* 平台代币 */
+.platform-token {
+    max-width: 800px;
+    width: 100%;
+    background-color: #1a1a1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.token-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.token-symbol {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffa191;
+    margin-bottom: 8px;
+}
+
+.token-label {
+    font-size: 14px;
+    color: #999;
+}
+
+.token-address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #121215;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 0 20px;
+}
+
+.token-address input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 16px 0;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    outline: none;
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.copy-icon:hover {
+    opacity: 1;
+}
+
+.token-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-link {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #3a3a3a;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-link:hover {
+    background-color: #ffa191;
+    color: #121215;
+    border-color: #ffa191;
+    transform: translateY(-2px);
+}
+
+/* 快速指南 */
+.quick-guide {
+    max-width: 800px;
+    width: 100%;
+    background-color: #1a1a1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.guide-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.guide-steps {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.guide-note {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* View All Tokens */
+.view-all-trigger {
+    margin-bottom: 60px;
+}
+
+.view-all-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    color: #ffa191;
+}
+
+/* 代币列表区域 */
+.tokens-section {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 40px;
+    margin-bottom: 80px;
+}
+
+.tokens-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons {
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+.header-icon1,
+.header-icon2 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.header-icon1 {
+    left: 0;
+    top: 0;
+}
+
+.header-icon2 {
+    left: 14px;
+    top: 4px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header-time {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 代币列表 */
+.tokens-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.token-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1d;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 25px 30px;
+    transition: all 0.3s ease;
+}
+
+.token-item:hover {
+    background-color: #222225;
+    border-color: #3a3a3a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.token-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.token-rank {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffa191;
+    min-width: 40px;
+    text-align: center;
+}
+
+.token-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.token-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.token-symbol {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.token-change {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.token-change.positive {
+    color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.1);
+}
+
+.token-change.negative {
+    color: #f87171;
+    background-color: rgba(248, 113, 113, 0.1);
+}
+
+.token-badge {
+    background-color: #2a2a2a;
+    color: #ffa191;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.token-name {
+    font-size: 15px;
+    color: #cccccc;
+}
+
+.token-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-text {
+    font-size: 13px;
+    color: #666;
+}
+
+.meta-dot {
+    color: #444;
+    margin: 0 5px;
+}
+
+.meta-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.meta-icon:hover {
+    opacity: 1;
+}
+
+.token-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.token-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+}
+
+.stat-mcap {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.stat-vol {
+    font-size: 13px;
+    color: #666;
+}
+
+.token-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #ffa191;
+    color: #121215;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.action-btn:hover {
+    background-color: #ff8f7d;
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.action-btn.secondary:hover {
+    background-color: #3a3a3a;
+}
+
+/* 页脚 */
+.footer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 60px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-brand {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.footer-brand .highlight {
+    color: #ffa191;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffa191;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 1400px) {
+    .header {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 40px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .token-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .token-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .nav-tagline {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .token-links {
+        flex-direction: column;
+    }
+
+    .btn-link {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
